@@ -1,34 +1,38 @@
 ## About ##
-[The Little Go Book](http://openmymind.net/The-Little-Go-Book/) is a free book introducing Go.
+[The Little Go Book](http://openmymind.net/The-Little-Go-Book/) Go'yu tanıtan ücretsiz bir kitaptır.
 
-The book was written by [Karl Seguin](http://openmymind.net), author of:
+[Karl Seguin](http://openmymind.net) tarafından yazılmıştır. Yazarın diğer kitapları:
 
 * [Scaling Viki](http://openmymind.net/scaling-viki/)
 * [The Little Redis Book](http://openmymind.net/2012/1/23/The-Little-Redis-Book/)
 * [The Little MongoDB Book](http://openmymind.net/2011/3/28/The-Little-MongoDB-Book/)
 * [Foundations of Programming](http://openmymind.net/FoundationsOfProgramming.pdf)
 
-## License ##
-The book is freely distributed under the  [Attribution-NonCommercial-ShareAlike 4.0 International](<http://creativecommons.org/licenses/by-nc-sa/4.0/>).
+Türkçe'ye çevirisi de [Umut Işık](https://umuts.info) tarafından yapılmıştır.
 
-## Translations ##
+## Lisans ##
+Kitabın kendisi ve Türkçe çevirisi [Attribution-NonCommercial-ShareAlike 4.0 International](<http://creativecommons.org/licenses/by-nc-sa/4.0/>) lisansı ile lisanslanmıştır.
 
-* [Spanish](https://github.com/raulexposito/the-little-go-book/tree/master/es) by Raúl Expósito
-* [Chinese](https://github.com/songleo/the-little-go-book_ZH_CN) by Songleo
-* [Traditional Chinese](https://github.com/kevingo/the-little-go-book) by KevinGo
-* [Vietnamese](https://github.com/quangnh89/the-little-go-book/blob/master/vi/readme.md) by Quang Nguyễn
-* [Italian](https://github.com/francescomalatesta/the-little-go-book-ita) by Francesco Malatesta
-* [Russian](https://github.com/sefus/the-little-go-book/blob/master/ru/go.md) by Roman Dolgopolov
-* [German](https://github.com/Aaronmacaron/the-little-go-book-de/blob/master/de/go.md) (15% done) by Aaron
-* [Amharic](https://github.com/codeethiopia/the-little-go-book-amharic) by codeethiopia
-* [Korean](https://github.com/shoebillk/the-little-go-book/blob/master/ko/go.md) by Byounghoon Kim
-* [Burmese](https://github.com/nainglinaung/the-little-go-book/blob/master/mm/go.md) By Naing Lin Aung
-## Formats ##
-The book is written in [Markdown](http://daringfireball.net/projects/markdown/) and converted to PDF using [Pandoc](http://johnmacfarlane.net/pandoc/).
+## Çeviriler ##
 
-The TeX template makes use of [Lena Herrmann's JavaScript highlighter](http://lenaherrmann.net/2010/05/20/javascript-syntax-highlighting-in-the-latex-listings-package).
+* [Spanish](https://github.com/raulexposito/the-little-go-book/tree/master/es) Raúl Expósito tarafından çevirilmiştir.
+* [Çince](https://github.com/songleo/the-little-go-book_ZH_CN) Songleo tarafından çevirilmiştir.
+* [Klasik Çince](https://github.com/kevingo/the-little-go-book) KevinGo tarafından çevirilmiştir.
+* [Vietnamca](https://github.com/quangnh89/the-little-go-book/blob/master/vi/readme.md) Quang Nguyễn tarafından çevirilmiştir.
+* [Italyanca](https://github.com/francescomalatesta/the-little-go-book-ita) Francesco Malatesta tarafından çevirilmiştir.
+* [Rusça](https://github.com/sefus/the-little-go-book/blob/master/ru/go.md) Roman Dolgopolov tarafından çevirilmiştir.
+* [Almanca](https://github.com/Aaronmacaron/the-little-go-book-de/blob/master/de/go.md) Aaron tarafından çevirilmiştir.
+* [Amharca](https://github.com/codeethiopia/the-little-go-book-amharic) codeethiopia tarafından çevirilmiştir.
+* [Korece](https://github.com/shoebillk/the-little-go-book/blob/master/ko/go.md) Byounghoon Kim tarafından çevirilmiştir.
+* [Birmanya dili](https://github.com/nainglinaung/the-little-go-book/blob/master/mm/go.md) Naing Lin Aung tarafından çevirilmiştir.
+* [Türkçe](https://github.com/kevingo/the-little-go-book) Umut Işık tarafından çevirilmiştir.
 
-Kindle and ePub format provided using [Pandoc](http://johnmacfarlane.net/pandoc/).
+## Formatlar ##
+Kitap [Markdown](http://daringfireball.net/projects/markdown/) formatında yazılmıştır ve PDF formatına dönüştürmek için [Pandoc](http://johnmacfarlane.net/pandoc/) kullanılır.
+
+TeX şablonu [Lena Herrmann'ın JavaScript highligter paketini](http://lenaherrmann.net/2010/05/20/javascript-syntax-highlighting-in-the-latex-listings-package) kullanır.
+
+Kindle ve ePub formatları için de [Pandoc](http://johnmacfarlane.net/pandoc/) kullanılır.
 
 ## Generating books ##
 Packages listed below are for Ubuntu. If you use another OS or distribution names would be similar.
