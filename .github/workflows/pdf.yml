@@ -10,7 +10,7 @@ jobs:
       
       - uses: docker://pandoc/latex:2.9
         with:
-          args: "--pdf-engine xelatex --template ./common/pdf-template.tex --listings ./en/go.md -o the-little-go-book.pdf"
+          args: "--pdf-engine xelatex --listings ./en/go.md -o the-little-go-book.pdf"
       
       - uses: actions/upload-artifact@v2
         with:
