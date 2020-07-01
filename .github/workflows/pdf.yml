@@ -1,6 +1,9 @@
 name: Generate PDF
 
-on: push
+on:
+  push:
+    tags:
+    - 'v*'
 
 jobs:
   create_book:
@@ -16,3 +19,14 @@ jobs:
         with:
           name: the-little-go-book
           path: the-little-go-book.pdf
+
+      - name: Upload PDF As Release Asset
+        id: upload-pdf-as-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./the-little-go-book.pdf
+          asset_name: the-little-go-book.pdf
+          asset_content_type: application/pdf
