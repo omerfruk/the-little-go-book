@@ -34,52 +34,52 @@ TeX şablonu [Lena Herrmann'ın JavaScript highligter paketini](http://lenaherrm
 
 Kindle ve ePub formatları için de [Pandoc](http://johnmacfarlane.net/pandoc/) kullanılır.
 
-## Generating books ##
-Packages listed below are for Ubuntu. If you use another OS or distribution names would be similar.
+## Kitapları Oluşturma ##
+Aşağıda listelenen paketler Ubuntu içindir. Başka bir işletim sistemi veya dağıtım kullanıyorsanız, paket adları benzer olacaktır.
 
 ### PDF
 
-#### Dependencies
+#### Bağımlılıklar
 
-Packages:
+Paketler:
 
 * `pandoc`
 * `texlive-xetex`
 * `texlive-latex-extra`
 * `texlive-latex-recommended`
 
-You should have [some fonts](https://github.com/karlseguin/the-little-redis-book/blob/master/common/pdf-template.tex#L11) installed too.
-Or you could change them to other ones if you want. Consider that fonts could cause [building troubles](https://github.com/karlseguin/the-little-redis-book/issues/26).
+Bazı [fontların](https://github.com/karlseguin/the-little-redis-book/blob/master/common/pdf-template.tex#L11) sisteminizde kurulu olması lazımdır.
+Ya da farklı fontlar kullanabilirsiniz.Bu konuda yaşanan [sorunları](https://github.com/karlseguin/the-little-redis-book/issues/26) gözden geçirmelisiniz.
 
-#### Building
+#### Oluşturma
 
-Run `make en/go.pdf`.
+Bu komutu `make en/go.pdf` çalıştırın.
 
 ### ePub
 
-#### Dependencies
+#### Bağımlılıklar
 
-Packages:
+Paketler:
 
 * `pandoc`
 
-#### Building
+#### Oluşturma
 
-Run `make en/go.epub`.
+Bu komutu `make en/go.epub` çalıştırın.
 
 ### Mobi
 
-#### Dependencies
+#### Bağımlılıklar
 
-Packages:
+Paketler:
 
 * `pandoc`
 
-You should have [KindleGen](http://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211) installed too.
+[KindleGen](http://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211)'in sisteminizde kurulu olması lazım.
 
-#### Building
+#### Oluşturma
 
-Run `make en/go.mobi`.
+Bu komutu `make en/go.mobi` çalıştırın.
 
-## Title Image ##
-A PSD of the title image is included. The font used is [Comfortaa](http://www.dafont.com/comfortaa.font).
+## Banner Resmi ##
+Banner resmi için hazırlanmış bir PSD dosyası vardır. Kullanılan font [Comfortaa](http://www.dafont.com/comfortaa.font)'dır.
