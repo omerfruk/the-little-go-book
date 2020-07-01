@@ -25,7 +25,7 @@ Kitabın kendisi ve Türkçe çevirisi [Attribution-NonCommercial-ShareAlike 4.0
 * [Amharca](https://github.com/codeethiopia/the-little-go-book-amharic) codeethiopia tarafından çevirilmiştir.
 * [Korece](https://github.com/shoebillk/the-little-go-book/blob/master/ko/go.md) Byounghoon Kim tarafından çevirilmiştir.
 * [Birmanya dili](https://github.com/nainglinaung/the-little-go-book/blob/master/mm/go.md) Naing Lin Aung tarafından çevirilmiştir.
-* [Türkçe](https://github.com/kevingo/the-little-go-book) Umut Işık tarafından çevirilmiştir.
+* [Türkçe](https://github.com/umutphp/the-little-go-book) Umut Işık tarafından çevirilmiştir.
 
 ## Formatlar ##
 Kitap [Markdown](http://daringfireball.net/projects/markdown/) formatında yazılmıştır ve PDF formatına dönüştürmek için [Pandoc](http://johnmacfarlane.net/pandoc/) kullanılır.
