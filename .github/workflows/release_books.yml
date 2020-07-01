@@ -1,4 +1,4 @@
-name: Generate PDF
+name: Generate ePub
 
 on:
   push:
@@ -9,13 +9,27 @@ jobs:
   create_book:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       
-      - uses: docker://pandoc/latex:2.9
+      - name: Create ePub
+        uses: docker://pandoc/latex:2.9
+        with:
+          args: "--epub-cover-image ./en/title.png ./en/title.txt ./en/go.md -o the-little-go-book.epub"
+      
+      - name: Upload ePub As Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: the-little-go-book
+          path: the-little-go-book.epub
+
+      - name: Create PDF
+        uses: docker://pandoc/latex:2.9
         with:
           args: "--pdf-engine xelatex --listings ./en/go.md -o the-little-go-book.pdf"
       
-      - uses: actions/upload-artifact@v2
+      - name: Upload PDF As Artifact
+        uses: actions/upload-artifact@v2
         with:
           name: the-little-go-book
           path: the-little-go-book.pdf
@@ -41,3 +55,14 @@ jobs:
           asset_path: ./the-little-go-book.pdf
           asset_name: the-little-go-book.pdf
           asset_content_type: application/pdf
+      
+      - name: Upload ePub As Release Asset
+        id: upload-epub-as-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./the-little-go-book.epub
+          asset_name: the-little-go-book.epub
+          asset_content_type: application/epub+zip
