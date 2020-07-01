@@ -6,9 +6,12 @@ jobs:
   create_book:
     runs-on: ubuntu-18.04
     steps:
+      - uses: actions/checkout@v2
+      
       - uses: docker://pandoc/core:2.9
         with:
-          args: "--pdf-engine xelatex --template ../common/pdf-template.tex --listings ./en/go.md -o the-little-go-book.pdf"
+          args: "--pdf-engine xelatex --template ./common/pdf-template.tex --listings ./en/go.md -o the-little-go-book.pdf"
+      
       - uses: actions/upload-artifact@v2
         with:
           name: the-little-go-book
