@@ -26,7 +26,7 @@ jobs:
       - name: Create Turkish ePub
         uses: docker://pandoc/latex:2.9
         with:
-          args: "--epub-cover-image ./tr/title.png ./tr/title.txt ./trd/go.md -o the-little-go-book-tr.epub"
+          args: "--epub-cover-image ./tr/title.png ./tr/title.txt ./tr/go.md -o the-little-go-book-tr.epub"
       
       - name: Upload Turkish ePub As Artifact
         uses: actions/upload-artifact@v2
