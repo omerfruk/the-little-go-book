@@ -8,7 +8,7 @@
 * [The Little MongoDB Book](http://openmymind.net/2011/3/28/The-Little-MongoDB-Book/)
 * [Foundations of Programming](http://openmymind.net/FoundationsOfProgramming.pdf)
 
-Türkçe'ye çevirisi de [Umut Işık](https://umuts.info) tarafından yapılmıştır.
+Türkçe'ye çevirisi de [Umut Işık](https://umuts.info) tarafından yapılmıştır. Okumak için [tıklayınız](./tr/go.md).
 
 ## Lisans ##
 Kitabın kendisi ve Türkçe çevirisi [Attribution-NonCommercial-ShareAlike 4.0 International](<http://creativecommons.org/licenses/by-nc-sa/4.0/>) lisansı ile lisanslanmıştır.
