@@ -12,27 +12,49 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       
-      - name: Create ePub
+      - name: Create English ePub
         uses: docker://pandoc/latex:2.9
         with:
           args: "--epub-cover-image ./en/title.png ./en/title.txt ./en/go.md -o the-little-go-book.epub"
       
-      - name: Upload ePub As Artifact
+      - name: Upload English ePub As Artifact
         uses: actions/upload-artifact@v2
         with:
           name: the-little-go-book
           path: the-little-go-book.epub
 
-      - name: Create PDF
+      - name: Create Turkish ePub
+        uses: docker://pandoc/latex:2.9
+        with:
+          args: "--epub-cover-image ./tr/title.png ./tr/title.txt ./trd/go.md -o the-little-go-book-tr.epub"
+      
+      - name: Upload Turkish ePub As Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: the-little-go-book-tr
+          path: the-little-go-book-tr.epub
+
+      - name: Create English PDF
         uses: docker://pandoc/latex:2.9
         with:
           args: "--pdf-engine xelatex --listings ./en/go.md -o the-little-go-book.pdf"
       
-      - name: Upload PDF As Artifact
+      - name: Upload English PDF As Artifact
         uses: actions/upload-artifact@v2
         with:
           name: the-little-go-book
           path: the-little-go-book.pdf
+
+      - name: Create Turkish PDF
+        uses: docker://pandoc/latex:2.9
+        with:
+          args: "--pdf-engine xelatex --listings ./tr/go.md -o the-little-go-book-tr.pdf"
+      
+      - name: Upload Turkish PDF As Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: the-little-go-book-tr
+          path: the-little-go-book-tr.pdf
 
       - name: Create Release
         id: create_release
@@ -45,8 +67,8 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Upload PDF As Release Asset
-        id: upload-pdf-as-release-asset 
+      - name: Upload English PDF As Release Asset
+        id: upload-english-pdf-as-release-asset 
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -55,9 +77,20 @@ jobs:
           asset_path: ./the-little-go-book.pdf
           asset_name: the-little-go-book.pdf
           asset_content_type: application/pdf
+
+      - name: Upload Turkish PDF As Release Asset
+        id: upload-turkish-pdf-as-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./the-little-go-book-tr.pdf
+          asset_name: the-little-go-book-tr.pdf
+          asset_content_type: application/pdf
       
-      - name: Upload ePub As Release Asset
-        id: upload-epub-as-release-asset 
+      - name: Upload English ePub As Release Asset
+        id: upload-english-epub-as-release-asset 
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -65,4 +98,15 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./the-little-go-book.epub
           asset_name: the-little-go-book.epub
+          asset_content_type: application/epub+zip
+      
+      - name: Upload Turkish ePub As Release Asset
+        id: upload-turkish-epub-as-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./the-little-go-book-tr.epub
+          asset_name: the-little-go-book-tr.epub
           asset_content_type: application/epub+zip
