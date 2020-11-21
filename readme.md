@@ -30,9 +30,9 @@ Kitabın kendisi ve Türkçe çevirisi [Attribution-NonCommercial-ShareAlike 4.0
 ## Formatlar ##
 Kitap [Markdown](http://daringfireball.net/projects/markdown/) formatında yazılmıştır ve PDF formatına dönüştürmek için [Pandoc](http://johnmacfarlane.net/pandoc/) kullanılır.
 
-TeX şablonu [Lena Herrmann'ın JavaScript highligter paketini](http://lenaherrmann.net/2010/05/20/javascript-syntax-highlighting-in-the-latex-listings-package) kullanır.
+TeX şablonunu oluşturmak için ise Lena Herrmann'ın JavaScript highligter paketini kullanır.
 
-Kindle ve ePub formatları için de [Pandoc](http://johnmacfarlane.net/pandoc/) kullanılır.
+Kindle ve ePub formatlarını oluşturmak için de [Pandoc](http://johnmacfarlane.net/pandoc/) kullanılır.
 
 ## Kitapları Oluşturma ##
 Aşağıda listelenen paketler Ubuntu içindir. Başka bir işletim sistemi veya dağıtım kullanıyorsanız, paket adları benzer olacaktır.
