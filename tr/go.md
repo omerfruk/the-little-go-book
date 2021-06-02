@@ -887,7 +887,7 @@ slice[0] = 999
 fmt.Println(scores)
 ```
 
-Çıktı `[1, 2, 999, 4, 5]` olur.
+`[X:Y]`  `scores` dizisinden 2 numaralı elemandan başlayıp 4 numaralı elamana kadar (4 numaralı elaman hariç tutularak) bir parça oluşturur. Ruby'deki örnekten farklı olarak yukarıdaki Go kodu `[1, 2, 999, 4, 5]` şeklinde bir sonuç üretir. Ç<br>nkü `slice` değişkeni `scores`.dizisi içine açılmış bir pencere gibidir, hafızada ayrı bir yer tutmaz.
 
 Bu, kodlama şeklinizi değiştirir. Örneğin, bir dizi fonksiyonu bir pozisyon parametresi alsın. JavaScript'te, bir dizedeki ilk alanı bulmak istiyorsak (evet, dilimler dizelerde de çalışır!) İlk beş karakterden sonra şunu yazarız:
 
@@ -902,7 +902,7 @@ Go'da dilimleri kullanırız:
 strings.Index(haystack[5:], " ")
 ```
 
-Yukarıdaki örnekten görebiliyoruz ki, `[X:]` *X'ten sonuna kadar* kısayolu iken, `[:X]` *başından X'e kadar* kısayoludur. Diğer dillerden farklı olarak, Go negatif değerleri desteklemez. Sonuncusu hariç bir dilimin tüm değerlerini istiyorsak şunu yaparız:
+Yukarıdaki örnekten, `[X:]` ifadesinin *X'ten sona* , `[:X]` ifadesinin ise *başlangıçtan X'e kadar* ifadelerinin kısa yolu olduğunu görebiliriz. Diğer dillerden farklı olarak Go, negatif değerleri desteklemez. Bir dizinin sonuncusu hariç tüm değerlerini istiyorsak, şöyle yazarız:
 
 ```go
 scores := []int{1, 2, 3, 4, 5}
@@ -1301,7 +1301,7 @@ func (l ConsoleLogger) Log(message string) {
 
 KDilin kendisi küçük ve odaklanmış arayüzleri teşvik etme eğilimindedir. Standart kütüphane arayüzlerle doludur. `io` paketinde `io.Reader`,`io.Writer` ve `io.Closer` gibi yaygın kullanılan arayüzler vardır. Yalnızca `Close()` işlevini çağıracağınız bir parametreyi bekleyen bir işlev yazarsanız, kesinlikle kendi tanımladığınız bir tipte bir yapı yerine bir `io.Closer` kabul etmelisiniz.
 
-Arayüzler içermelerde de kullanılıyor. Ve arayüzlerin kendileri de diğer arayüzlerden oluşabilir. Örneğin, `io.ReadCloser`, `io.Reader` arayüzünün yanı sıra ` io.Closer ` arayüzünden de oluşan bir arayüzdür.
+Arayüzler içermelerde de kullanılıyor. Ve arayüzlerin kendileri de diğer arayüzlerden oluşabilir. Örneğin, `io.ReadCloser`, `io.Reader` arayüzünün yanı sıra `io.Closer` arayüzünden de oluşan bir arayüzdür.
 
 Son olarak, arayüzler döngüsel içe aktarımları önlemek için yaygın olarak kullanılır. Uygulamaları olmadığı için sınırlı bağımlılıkları olacaktır.
 
