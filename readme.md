@@ -37,6 +37,8 @@ Kindle ve ePub formatlarını oluşturmak için de [Pandoc](http://johnmacfarlan
 ## Kitapları Oluşturma ##
 Aşağıda listelenen paketler Ubuntu içindir. Başka bir işletim sistemi veya dağıtım kullanıyorsanız, paket adları benzer olacaktır.
 
+make komutları default olarak en dilinde işlem yapmaktadır. tr için ``LANGUAGE=tr`` ekleyebilirsiniz.
+
 ### PDF
 
 #### Bağımlılıklar
@@ -53,7 +55,8 @@ Ya da farklı fontlar kullanabilirsiniz.Bu konuda yaşanan [sorunları](https://
 
 #### Oluşturma
 
-Bu komutu `make en/go.pdf` çalıştırın.
+Bu komutu `make go.pdf` çalıştırın.
+Türkçe için bu komutu `make LANGUAGE=tr go.pdf` çalıştırın.
 
 ### ePub
 
@@ -65,7 +68,8 @@ Paketler:
 
 #### Oluşturma
 
-Bu komutu `make en/go.epub` çalıştırın.
+Bu komutu `make go.epub` çalıştırın.
+Türkçe için bu komutu `make LANGUAGE=tr go.epub` çalıştırın.
 
 ### Mobi
 
@@ -79,7 +83,8 @@ Paketler:
 
 #### Oluşturma
 
-Bu komutu `make en/go.mobi` çalıştırın.
+Bu komutu `make go.mobi` çalıştırın.
+Türkçe için bu komutu `make LANGUAGE=tr go.mobi` çalıştırın.
 
 ## Banner Resmi ##
 Banner resmi için hazırlanmış bir PSD dosyası vardır. Kullanılan font [Comfortaa](http://www.dafont.com/comfortaa.font)'dır.

@@ -1,3 +1,4 @@
+LANGUAGE = en
 SOURCE_FILE_NAME = go.md
 BOOK_FILE_NAME = go
 
@@ -14,16 +15,16 @@ EPUB_BUILDER_FLAGS = \
 MOBI_BUILDER = kindlegen
 
 
-en/go.pdf:
-	cd en && $(PDF_BUILDER) $(PDF_BUILDER_FLAGS) $(SOURCE_FILE_NAME) -o $(BOOK_FILE_NAME).pdf
+go.pdf:
+	cd $(LANGUAGE) && $(PDF_BUILDER) $(PDF_BUILDER_FLAGS) $(SOURCE_FILE_NAME) -o $(BOOK_FILE_NAME).pdf
 
-en/go.epub: en/title.png en/title.txt en/go.md
+go.epub: $(LANGUAGE)/title.png $(LANGUAGE)/title.txt $(LANGUAGE)/go.md
 	$(EPUB_BUILDER) $(EPUB_BUILDER_FLAGS) $^ -o $@
 
-en/go.mobi: en/go.epub
+go.mobi: $(LANGUAGE)/go.epub
 	$(MOBI_BUILDER) $^
 
-all: en/go.pdf en/go.mobi
+all: $(LANGUAGE)/go.pdf $(LANGUAGE)/go.mobi
 
 clean:
 	rm -f */$(BOOK_FILE_NAME).pdf
